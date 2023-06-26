@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "rectrix-core": {
+      "projectType": "library",
+      "root": "projects/rectrix-core",
+      "sourceRoot": "projects/rectrix-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/rectrix-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rectrix-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/rectrix-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rectrix-core/src/test.ts",
+            "tsConfig": "projects/rectrix-core/tsconfig.spec.json",
+            "karmaConfig": "projects/rectrix-core/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "rectrix-core"
 }
