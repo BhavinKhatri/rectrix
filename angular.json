@@ -35,5 +35,7 @@
       }
     }
   },
-  "defaultProject": "rectrix-core"
+  "cli": {
+    "analytics": false
+  }
 }
