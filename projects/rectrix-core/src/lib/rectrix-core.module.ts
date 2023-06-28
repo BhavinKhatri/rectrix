@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RectrixCoreComponent } from './rectrix-core.component';
+import { PrimaryButtonComponent } from './primary-button/primary-button.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
 @NgModule({
   declarations: [
-    RectrixCoreComponent
+    RectrixCoreComponent,
+    PrimaryButtonComponent
   ],
   imports: [
+    MatButtonModule
   ],
   exports: [
-    RectrixCoreComponent
+    RectrixCoreComponent,
+    PrimaryButtonComponent
   ]
 })
 export class RectrixCoreModule { }
